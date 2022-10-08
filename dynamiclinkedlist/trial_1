@@ -18,12 +18,14 @@ int main()
     ext_2.nextext = &ext_3;
     ext_3.nextext = &ext_1;
 
-    int *intarr[10];
-    int i;
-    
     int size;
     cout << "Enter size: ";
-    cin >> size; 
+    cin >> size;
+    
+    int *intarr[size];
+    int i;
+    
+    
     
     for (i = 0; i < 10; ++i)
     {
