@@ -42,7 +42,7 @@ int main(){
     
     for (int i = 1; i <= size; i++)
     {
-        cout << tempLink -> value;
+        cout << tempLink -> value << "  ";
         tempLink = tempLink -> nextlink;
         
     }
