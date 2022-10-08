@@ -20,7 +20,11 @@ int main()
 
     int *intarr[10];
     int i;
-
+    
+    int size;
+    cout << "Enter size: ";
+    cin >> size; 
+    
     for (i = 0; i < 10; ++i)
     {
         intarr[i] = new int;
@@ -34,10 +38,11 @@ int main()
     ext_3.value = *intarr[2];
 
     temp = &ext_1;
+    
 
-    for (i = 0; i < 10; ++i)
+    for (i = 0; i < size; ++i)
     {
-        cout << temp->value << "   ";
+        cout << temp->value << "  ";
 
         temp = temp->nextext;
     }
