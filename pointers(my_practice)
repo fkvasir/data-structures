@@ -2,53 +2,8 @@
 #include <assert.h>
 
 using namespace std;
-//practice code
-int main()
-{
-    int*x;
-    x = new int[9];
-    int* y;
-    y = new int[8];
-    int* z;
-    z = new int [7];
-    int* a;
-    a = new int [6];
-    int* b;
-    b = new int [5];
-    int* c;
-    c = new int [4];
-    int* d;
-    d = new int [3];
-    int* e;
-    e = new int [2];
-    int* f;
-    f = new int [1];
-    int* g;
-    g = new int [0];
-    return 0;
-
-    int size;
-    int *ptr;
-
-    cout << "size of array ->  ";
-    cin >> size;
-    ptr = new int[size];
-    cout << "Size of array > ";
-    for (int i = 0;i<size;i++)
-    {
-        cin >> ptr[i];
-    }
-    cout << "Values in the array are:";
-    for (int i = 0; i<size; i++)
-    {
-        cout << ptr[i];
-    }
-
-return 0;
-}
 
 
-// professor's code
 int main (void)
 {
     int i;
