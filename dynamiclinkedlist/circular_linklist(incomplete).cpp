@@ -14,12 +14,6 @@ int main()
   struct Node *nextnode;
   struct Node *headnode = new Node;
 
-  if (head == NULL)
-  {
-    return 0;
-  }
-  // pwede rapud ni assert sir
-
   headnode->value = 1;
   headnode = NULL;
 
