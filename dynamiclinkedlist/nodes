@@ -13,13 +13,13 @@ struct Link
 int main(){
     struct Link *headLink = new Link;
     assert(headLink != NULL);
-    headLink -> value = 0;
+    headLink -> value = 1;
     headLink -> nextlink = NULL;
     Link *tempLink = headLink;
     int num;
     cout << "Enter max number: ";
     cin >> num;
-    for (int i = 1; i <= num; i++)
+    for (int i = 2; i <= num; i++)
     {
         Link *newLink = new Link;
         assert(newLink != NULL);
