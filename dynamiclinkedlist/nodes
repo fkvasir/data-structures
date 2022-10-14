@@ -19,7 +19,7 @@ int main(){
     int num;
     cout << "Enter max number: ";
     cin >> num;
-    for (int i = 2; i <= num; i++)
+    for (int i = head->value + 1; i <= num; i++)
     {
         Link *newLink = new Link;
         assert(newLink != NULL);
