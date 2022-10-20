@@ -21,7 +21,7 @@ int main(){
     headLink -> tail = NULL;
     Link *tempLink = headLink;
     
-    for (int i = 2; i <= 3; i++)
+    for (int headLink -> head + 1; i <= 3; i++)
     {
         Link *newLink = new Link;
         assert(newLink != NULL);
