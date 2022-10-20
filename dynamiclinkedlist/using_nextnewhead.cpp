@@ -6,8 +6,8 @@ using namespace std;
 
 struct Link
 {
-  int value;
-  struct Link *nextlink;
+  int head;
+  struct Link *tail;
 };
 
 
@@ -17,8 +17,8 @@ int main(){
     
     assert(headLink != NULL);
     
-    headLink -> value = 1;
-    headLink -> nextlink = NULL;
+    headLink -> head = 1;
+    headLink -> tail = NULL;
     Link *tempLink = headLink;
     
     for (int i = 2; i <= 3; i++)
@@ -26,31 +26,31 @@ int main(){
         Link *newLink = new Link;
         assert(newLink != NULL);
         
-        newLink -> value = i;
-        newLink ->nextlink = headLink;
+        newLink -> head = i;
+        newLink ->tail = headLink;
         
         
-        tempLink -> nextlink = newLink;
+        tempLink -> tail = newLink;
         tempLink = newLink;
         
     }
    
-    int size;
+    int size = 10;
     cout << "Enter size: ";
     cin >> size;
     tempLink = headLink;
     
     for (int i = 1; i <= size; i++)
     {
-        cout << tempLink -> value << "  ";
-        tempLink = tempLink -> nextlink;
+        cout << tempLink -> head << "  ";
+        tempLink = tempLink -> tail;
         
     }
     
     
     for (int i = 1; i <= 3; i++)
     {
-        Link *tempLink_1 = tempLink -> nextlink;
+        Link *tempLink_1 = tempLink -> tail;
         delete tempLink;
         tempLink = tempLink_1;
     }
