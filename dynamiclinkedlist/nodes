@@ -6,26 +6,26 @@ using namespace std;
 
 struct Link
 {
-  int value;
-  struct Link *nextlink;
+  int head;
+  struct Link *tail;
 };
 
 int main(){
     struct Link *headLink = new Link;
     assert(headLink != NULL);
-    headLink -> value = 1;
-    headLink -> nextlink = NULL;
+    headLink -> head = 1;
+    headLink -> tail = NULL;
     Link *tempLink = headLink;
     int num;
     cout << "Enter max number: ";
     cin >> num;
-    for (int i = head->value + 1; i <= num; i++)
+    for (int i = headLink->head + 1; i <= num; i++)
     {
         Link *newLink = new Link;
         assert(newLink != NULL);
-        newLink -> value = i;
-        newLink ->nextlink = headLink;
-        tempLink -> nextlink = newLink;
+        newLink -> head = i;
+        newLink ->tail = headLink;
+        tempLink -> tail = newLink;
         tempLink = newLink;
         
     }
@@ -35,13 +35,13 @@ int main(){
     tempLink = headLink;
     for (int i = 1; i <= size; i++)
     {
-        cout << tempLink -> value << "  ";
-        tempLink = tempLink -> nextlink;
+        cout << tempLink -> headLink << "  ";
+        tempLink = tempLink -> tail;
         
     }
     for (int i = 1; i <= num; i++)
     {
-        Link *tempLink_1 = tempLink -> nextlink;
+        Link *tempLink_1 = tempLink -> tail;
         delete tempLink;
         tempLink = tempLink_1;
     }
