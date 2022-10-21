@@ -41,9 +41,9 @@ int main(){
     }
     for (int i = 1; i <= num; i++)
     {
-        Link *tempLink_1 = tempLink -> tail;
+        Link *temporary = tempLink -> tail;
         delete tempLink;
-        tempLink = tempLink_1;
+        tempLink = temporary;
     }
     return 0;
 }
