@@ -35,7 +35,8 @@ int main(){
     tempLink = headLink;
     for (int i = 1; i <= size; i++)
     {
-        cout << tempLink -> headLink << "  ";
+        cout << tempLink -> head << "  ";
+        cout << tempLink -> head << " : " << tempLink -> tail<< endl;
         tempLink = tempLink -> tail;
         
     }
