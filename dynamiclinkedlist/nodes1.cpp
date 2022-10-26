@@ -3,21 +3,23 @@
 
 using namespace std;
 
+
 struct Link
 {
   int head;
   struct Link *tail;
 };
 
-
 int main(){
-    Link *headLink = new Link;
+    struct Link *headLink = new Link;
     assert(headLink != NULL);
     headLink -> head = 1;
     headLink -> tail = NULL;
     Link *tempLink = headLink;
-    
-    for (int i = headLink -> head + 1; i <= 3; i++)
+    int num;
+    cout << "Enter max number: ";
+    cin >> num;
+    for (int i = headLink->head + 1; i <= num; i++)
     {
         Link *newLink = new Link;
         assert(newLink != NULL);
@@ -27,22 +29,28 @@ int main(){
         tempLink = newLink;
         
     }
-    int size = 10;
+    int size;
     cout << "Enter size: ";
     cin >> size;
     tempLink = headLink;
-    
-    for (int i = 1; i <= size; i++)
+    for (int i = headLink -> head + 1; i <= size; i++)
     {
         cout << tempLink -> head << "  ";
-        tempLink = tempLink -> tail; 
+        cout << tempLink -> head << " : " << tempLink -> tail<< endl;
+        tempLink = tempLink -> tail;
+        
     }
-    
-    for (int i = 1; i <= 3; i++)
+    if (tempLink -> tail == NULL)
     {
-        Link *tempLink_1 = tempLink -> tail;
+        cout << "Invalid";
+    }
+    if (Link *tempLink= tempLink -> tail)
+    {
+        for (int i = headLink-> head + 1; i <= num; i++)
+        {
         delete tempLink;
-        tempLink = tempLink_1;
+        tempLink = tempLink -> head;
+        }
     }
     return 0;
 }
