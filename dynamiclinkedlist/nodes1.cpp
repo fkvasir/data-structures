@@ -33,7 +33,7 @@ int main(){
     cout << "Enter size: ";
     cin >> size;
     tempLink = headLink;
-    for (int i = headLink -> head + 1; i <= size; i++)
+    for (int i = headLink -> head; i <= size; i++)
     {
         cout << tempLink -> head << "  ";
         cout << tempLink -> head << " : " << tempLink -> tail<< endl;
