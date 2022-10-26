@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 struct Link
 {
   int head;
@@ -11,12 +10,9 @@ struct Link
 };
 
 
-
 int main(){
     struct Link *headLink = new Link;
-    
     assert(headLink != NULL);
-    
     headLink -> head = 1;
     headLink -> tail = NULL;
     Link *tempLink = headLink;
@@ -25,16 +21,12 @@ int main(){
     {
         Link *newLink = new Link;
         assert(newLink != NULL);
-        
         newLink -> head = i;
         newLink ->tail = headLink;
-        
-        
         tempLink -> tail = newLink;
         tempLink = newLink;
         
     }
-   
     int size = 10;
     cout << "Enter size: ";
     cin >> size;
@@ -43,10 +35,8 @@ int main(){
     for (int i = 1; i <= size; i++)
     {
         cout << tempLink -> head << "  ";
-        tempLink = tempLink -> tail;
-        
+        tempLink = tempLink -> tail; 
     }
-    
     
     for (int i = 1; i <= 3; i++)
     {
