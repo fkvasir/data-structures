@@ -11,7 +11,7 @@ struct Link
 
 
 int main(){
-    struct Link *headLink = new Link;
+    Link *headLink = new Link;
     assert(headLink != NULL);
     headLink -> head = 1;
     headLink -> tail = NULL;
