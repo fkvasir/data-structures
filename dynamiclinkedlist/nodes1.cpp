@@ -49,7 +49,7 @@ int main(){
         for (int i = headLink-> head + 1; i <= num; i++)
         {
         delete tempLink;
-        tempLink = tempLink -> head;
+        tempLink = tempLink -> tail;
         }
     }
     return 0;
